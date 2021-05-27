@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+
+{%block body_block%} 
+    <h1  style="text-align:center">Registration</h1>
+<div class="container">
+    <div class="child" style="color:red";>
+    <form action="" method="POST">
+        {%csrf_token%}
+        {{form.as_p}}
+        <center><input type="submit" value="Register" class="btn btn-primary btn-lg" style="width:1140px;position:relative;margin-top:30px";></center>
+    </form>
+    
+  </div> 
+  </div>
+    {%endblock%} 
+

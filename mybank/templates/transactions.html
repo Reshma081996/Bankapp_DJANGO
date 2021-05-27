@@ -1,0 +1,15 @@
+{%extends 'home.html'%}
+
+
+{%block body_block%} 
+    <center><h1>TRANSACTIONS</h1></center>
+
+    <form action="" method="POST">
+        {%csrf_token%}
+        {{form.as_p}}
+        <center><input type="submit" value="Enter" class="btn btn-primary btn-lg" style="width:1113px"></center>
+    </form>
+    
+    
+{% endblock %}
+

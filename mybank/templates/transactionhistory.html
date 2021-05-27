@@ -1,0 +1,31 @@
+ {%extends 'home.html'%}
+{%block body_block%} 
+<table class="table" style="color:blue">
+    <h1 style="text-align:center">YOUR TRANSACTION HISTORY</h1>
+    <tr>
+        
+        <td>Amount</td>
+        <td>Date</td>
+        <td>Account Number</td>
+        <td>Transaction Type</td>
+        
+    </tr>
+    {% for transaction in dtransactions%}
+    <tr>
+         <td>Rs {{transaction.amount}}</td>
+        <td>{{transaction.date}}</td>
+        <td>{{transaction.to_accno}}</td>
+        <td>Debit</td
+    </tr>
+    {% endfor %}
+   
+    {% comment %} <h1 style="text-align:center">CREDIT TRANSACTION</h1> {% endcomment %}
+    {% for transaction in ctransactions%}
+        <tr>
+         <td>Rs {{transaction.amount}}</td>
+        <td>{{transaction.date}}</td>
+        <td>{{transaction.to_accno}}</td>
+        <td>Credit</td
+    </tr>
+    {% endfor %}
+{% endblock %} 
